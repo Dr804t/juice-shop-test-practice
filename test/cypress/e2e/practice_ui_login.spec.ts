@@ -5,6 +5,10 @@
 
 describe('Juice Shop UI Practice', () => {
   it('should log in through the user interface', () => {
+
+    cy.setCookie('cookieconsent_status', 'dismiss')
+    cy.setCookie('welcomebanner_status', 'dismiss')
+
     // 1. Visit the app
     cy.visit('http://localhost:3000/#/login');
 
